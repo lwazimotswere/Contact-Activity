@@ -21,13 +21,25 @@ class MainActivity : AppCompatActivity() {
 
         println("Hi my name is, $firstName, $lastName, I live in $address")
 
+        // The current year
         val currentYear = 2026
+
+        // Changing year of birth to integer
         val birthYear = yearOfBirth.toInt()
 
+        // Calculate age
         val age = currentYear - birthYear
+
+        // Years until age 100
         val yearsTo100 = 100 - age
+
+        // Age in months
         val ageMonths = age * 12
+
+        // Age in days (skip leap years)
         val ageDays = age * 365
+
+        //Remainer when age divided by 5
         val remainder = age % 5
 
         println("Current age: $age")
