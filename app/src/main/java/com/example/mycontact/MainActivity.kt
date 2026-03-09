@@ -19,25 +19,31 @@ class MainActivity : AppCompatActivity() {
         val monthOfBirth = "July"
         val yearOfBirth = "2005"
 
-        printIn ("Hi my name is", firstName, lastName, "I live in", address)
+        println("Hi my name is, $firstName, $lastName, I live in $address")
+
+        val currentYear = 2026
+        val birthYear = yearOfBirth.toInt()
+
+        val age = currentYear - birthYear
+        val yearsTo100 = 100 - age
+        val ageMonths = age * 12
+        val ageDays = age * 365
+        val remainder = age % 5
+
+        println("Current age: $age")
+        println("Years until 100: $yearsTo100")
+        println("Age in months: $ageMonths")
+        println("Age in days: $ageDays")
+        println("Remainder when age divided by 5: $remainder")
 
         setContentView(R.layout.activity_main)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-
-
-    }
-
-    private fun printIn(
-        string: String,
-        firstName: String,
-        lastName: String,
-        string4: String,
-        address: String
-    ) {
     }
 }
+
+
